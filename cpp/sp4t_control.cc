@@ -23,8 +23,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#define NSTATES 4 
-#define NPINS 2
+#define NSTATES 5 
+#define NPINS 4
 
 // Functions
 void setState(int state);
@@ -35,12 +35,13 @@ void setup();
 
 // Variables
 char state[1] = {'0'};     // Initilize with RF1 port enabled
-int sPin[4] = {17, 27}; // Pins A and B for RFSwitch
-short code[4][2] = {
-	{0, 0}, // RF 1
-	{1, 0},	// RF 2
-	{0, 1}, // RF 3
-	{1, 1}, // RF 4
+int sPin[4] = {17, 27, 23, 24}; // Pins A and B for RFSwitch
+short code[NSTATES][NPINS] = {
+	{0, 0, 1, 1}, // RFA 1
+	{1, 0, 1, 1}, // RFA 2
+	{0, 1, 1, 1}, // RFA 3
+	{1, 1, 1, 1}, // RFA 4
+	{1, 1, 0, 0}, // RFB 1
 };
 
 // ==========================================================================
