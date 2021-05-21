@@ -90,7 +90,7 @@ It is important to note that the RFswitch will always have a mode enabled (as 0,
 
 3. Compile the cpp code:
 
-      `cd ~/gdyse-rfswitch-controlle/cpp
+      `cd ~/dyse-rfswitch-controlle/cpp
       g++ sp4t_control.cc -o sp4t_control -l wiringPi`
 
 4. Change the hostname of the pi, so that you can ssh in it. Also enable SHH
