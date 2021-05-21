@@ -5,6 +5,10 @@ This code can be used without having to physically ssh into the Raspberry pi, an
 
 `sshpass -p ********* ssh -oStrictHostKeyChecking=no  -X pi@raspberrypi-dyse "python /home/pi/dyse-rfswitch-controller/python/client_cli.py localhost *PORT* *CODE*" > /dev/null 2>&1 &`
 
+## Connections
+
+![](connections.png)
+
 #### How to use this in python
 
 The following would toggle automatically the states of the antenna, could be use concurrently with dragon radio or integrated within the code itself:
@@ -47,9 +51,6 @@ The controller should be set up to run on boot, so that it is always ready (intr
 The Raspberry Pi is listening on port 8081 for a socket connection. A python example shows how this connection could be achieved in order to send the desired state for the rfswitches.
 
 * `client_cli.py`: it can be used as `python3 client_cli.py pihostname 808X state`. If run locally within the pi use localhost, if used from the grid use the hostname of the raspberry.
-
-## Notes on the server sockets
-
 
 
 ## `SP4T_SWITCH.CC` runs on port 8081
