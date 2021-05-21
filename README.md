@@ -1,5 +1,5 @@
 # DYSE rfswitch RPi controller 
-Code to use the Raspberry Pi as a two RF swith controller for running Reconfigurable antenna experiments on the grid through DYSE. The tested OS for the raspberry Pi was 2019-04-08-raspbian-stretch-lite but any lite version will work.
+Code to use the Raspberry Pi as a two RF swith controller for running Reconfigurable antenna experiments on the grid through DYSE. The tested OS for the raspberry Pi was `2019-04-08-raspbian-stretch-lite` but any lite version will work.
 
 This code can be used without having to physically ssh into the Raspberry pi, an example of this would be the following code (sends socket command to socket port *PORT* and code *CODE* to that port):
 
@@ -90,7 +90,7 @@ It is important to note that the RFswitch will always have a mode enabled (as 0,
 
 3. Compile the cpp code:
 
-      `cd ~/gdyse-rfswitch-controlle/cpp
+      `cd ~/dyse-rfswitch-controlle/cpp
       g++ sp4t_control.cc -o sp4t_control -l wiringPi`
 
 4. Change the hostname of the pi, so that you can ssh in it. Also enable SHH
