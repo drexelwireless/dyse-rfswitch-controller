@@ -81,7 +81,7 @@ It is important to note that the RFswitch will always have a mode enabled (as 0,
       `cd
       git clone git@github.com:drexelwireless/dyse-rfswitch-controller.git`
 
-2. Set a cron job to start the controllers on startup, if using 2 antennas, use startup2ralas.sh
+2. Set a cron job to start the controller on startup
 
         % Make sure the startup script can be executed
         chmod +x /home/pi/dyse-rfswitch-controller/startup.sh
@@ -91,7 +91,7 @@ It is important to note that the RFswitch will always have a mode enabled (as 0,
 
 3. Compile the cpp code:
 
-      `cd ~/dyse-rfswitch-controlle/cpp
+      `cd ~/dyse-rfswitch-controller/cpp
       g++ sp4t_control.cc -o sp4t_control -l wiringPi`
 
 4. Change the hostname of the pi, so that you can ssh in it. Also enable SHH
